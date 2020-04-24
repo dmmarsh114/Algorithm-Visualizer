@@ -1,9 +1,6 @@
 export function selectionSort(arrayToSort) {
     let array = arrayToSort;
 
-    // The code below is for debugging 
-    // array.sort((a, b) => a - b);
-
     // I copied this code wholesale from https://codingmiles.com/sorting-algorithms-insertion-sort-using-javascript-2/
 
     var length = array.length;

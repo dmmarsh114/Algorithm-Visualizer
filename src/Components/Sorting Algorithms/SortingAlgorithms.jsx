@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { selectionSort } from './Sorting Algorithms/SelectionSort';
+
+// import alogrithms
+import { selectionSort } from './SelectionSort';
+import { bubbleSort } from './BubbleSort';
 
 const ArrayDisplay = (props) => {
 
@@ -66,6 +69,19 @@ const ArrayDisplay = (props) => {
         console.log('SORTED MAIN', mainArray);
     }
 
+    const bubbleSortHelper = (arrayToSort) => {
+        // save the array's current, unsorted state
+        setPrevArray([...mainArray]);
+
+        // call the algorithm and display the sorted array
+        let sortedArray = selectionSort(arrayToSort);
+        setMainArray([...sortedArray]);
+
+        // compare the two arrays (for debugging)
+        console.log('BEFORE SORT', prevArray);
+        console.log('SORTED MAIN', mainArray);
+    }
+
     useEffect(() => {
         console.log('main array has changed');
     }, [mainArray]);
@@ -89,7 +105,9 @@ const ArrayDisplay = (props) => {
             {/* SORTING ALGORITHM BUTTONS */}
             <section style={{ paddingBottom: '20px', display: 'flex', justifyContent: 'center' }}>
                 <button onClick={() => selectionSortHelper(mainArray)}>selection sort</button>
+                <button onClick={() => bubbleSortHelper(mainArray)}>bubble sort</button>
             </section>
+
 
             {/* ARRAY DISPLAY */}
             <section style={{ width: '100%', display: 'flex', marginBottom: '20px', backgroundColor: 'gray' }}>

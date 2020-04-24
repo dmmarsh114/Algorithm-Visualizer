@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import ArrayDisplay from './Components/ArrayDisplay';
+import SortingAlgorithms from './Components/Sorting Algorithms/SortingAlgorithms';
 
 function App() {
   return (
     <div>
-      <ArrayDisplay />
+      <SortingAlgorithms />
     </div>
   );
 }
