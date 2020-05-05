@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
-import Planets from './planets/Planets';
+import Planets from './components/solarSystemPage/Planets';
 import Tristan from './components/solarSystemPage/Tristan';
 
 function App() {
