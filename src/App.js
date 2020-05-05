@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
-
-import SortingAlgorithms from './Components/Sorting Algorithms/SortingAlgorithms';
+import 'antd/dist/antd.css';
+import Planets from './components/solarSystemPage/Planets';
+import Tristan from './components/solarSystemPage/Tristan';
 
 function App() {
   return (
     <div>
-      <SortingAlgorithms />
+      <h1>Tristan</h1>
+      <Tristan />
+      <h1>Taylor</h1>
+      <Planets />
     </div>
   );
 }
