@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
+import Tristan from './components/solarSystemPage/Tristan';
 
 function App() {
   return (
     <div>
-      <h1>Tristan</h1>
+      <h1>Planets App</h1>
+      <Tristan />
 
     </div>
   );
