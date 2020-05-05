@@ -7,7 +7,7 @@ function App() {
     <div>
       <h1>Planets App</h1>
       <Tristan />
-
+      <h1>Develop</h1>
     </div>
   );
 }
