@@ -4,6 +4,8 @@ import 'antd/dist/antd.css';
 import Planets from './components/solarSystemPage/Planets';
 import Tristan from './components/solarSystemPage/Tristan';
 
+import SolarSystem from './components/p5/SolarSystem';
+
 function App() {
   return (
     <div>
@@ -11,6 +13,7 @@ function App() {
       <Tristan />
       <h1>Taylor</h1>
       <Planets />
+      <SolarSystem />
     </div>
   );
 }
