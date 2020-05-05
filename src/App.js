@@ -7,10 +7,10 @@ import Tristan from './components/solarSystemPage/Tristan';
 function App() {
   return (
     <div>
-      <Planets />
-      <h1>Planets App</h1>
+      <h1>Tristan</h1>
       <Tristan />
-      <h1>Develop</h1>
+      <h1>Taylor</h1>
+      <Planets />
     </div>
   );
 }
