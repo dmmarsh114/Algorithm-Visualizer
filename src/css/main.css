@@ -1,0 +1,14 @@
+@import './solarSystem.css';
+@import './landing.css';
+@import './nextPage.css';
+
+
+:root {
+    /* color variables */
+    --ring: 1px solid lightgray;
+    --ring-hover: 2px solid white;
+}
+
+body {
+    background-color: black !important;
+}
