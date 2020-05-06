@@ -22,8 +22,8 @@ const SolarSystemCard = (props) => {
         }).then(res => res.json())
             .then(planetData => {
                 setPlanetName(planetData.englishName);
-                setSideralOrbit(Math.round(planetData.sideralOrbit));
-                setSideralRotation(Math.round(planetData.sideralRotation));
+                setSideralOrbit(planetData.sideralOrbit);
+                setSideralRotation(planetData.sideralRotation);
                 setSideralOrbit(planetData.sideralOrbit);
                 setSideralRotation(planetData.sideralRotation);
                 setPlanetVolValue(planetData.vol.volValue)
@@ -56,8 +56,8 @@ const SolarSystemCard = (props) => {
     const cardContent = () => {
         return (
             <div>
-                <p> {planetName} has {sideralOrbit} days in a year...</p>
-                <p>and {sideralRotation} hours in a day!</p>
+                <p> {planetName} has {Math.round(sideralOrbit)} days in a year...</p>
+                <p>and {Math.round(sideralRotation)} hours in a day!</p>
                 {
                     numberOfMoons > 0 ?
                         <p>{planetName} has {numberOfMoons} {numberOfMoons === 1 ? 'moon' : 'moons'}.</p>
