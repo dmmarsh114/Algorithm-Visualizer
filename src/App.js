@@ -2,13 +2,12 @@ import React from 'react';
 import './App.css';
 import './css/main.css'
 import 'antd/dist/antd.css';
-// import Planets from './components/Taylor/Planets';
-// import Tristan from './components/Tristan/Tristan';
-import SolarSystemPage from './components/Tristan/SolarSystemPage';
-import LandingPage from './components/Tristan/LandingPage';
-import NextPage from './components/Tristan/NextPage';
 
-import SolarSystemCard from './components/SolarSystemCard';
+import SolarSystemPage from './components/SolarSystem/SolarSystemPage';
+import LandingPage from './components/Landing/LandingPage';
+import NextPage from './components/NextPage/NextPage';
+
+import SolarSystemCard from './components/SolarSystem/SolarSystemCard';
 
 function App() {
 
@@ -16,13 +15,9 @@ function App() {
 
   return (
     <div>
-      {/* <h1>Tristan</h1>
-      <Tristan />
-      <h1>Taylor</h1>
-      <Planets /> */}
       <LandingPage />
-      <SolarSystemCard planet={planet} />
-      <SolarSystemPage setPlanet={setPlanet} />
+      <SolarSystemCard planet={planet} setPlanet={setPlanet} />
+      <SolarSystemPage planet={planet} setPlanet={setPlanet} />
       <NextPage />
     </div>
   );
