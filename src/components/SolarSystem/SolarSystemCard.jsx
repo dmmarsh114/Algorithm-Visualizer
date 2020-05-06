@@ -48,7 +48,7 @@ const SolarSystemCard = (props) => {
         let planetVol = planetExponent * planetBaseVol;
 
         return planetVol > earthsVol
-            ? `There are ${Math.round(planetVol / earthsVol)} earth's inside of ${planet}.`
+            ? `You could fit ${Math.round(planetVol / earthsVol)} earths inside of ${planet}.`
             : ''
             ;
     }
@@ -75,7 +75,7 @@ const SolarSystemCard = (props) => {
 
     return (
         <Card
-            title={planetName === '' ? 'Click on a planet to learn more about it!' : planetName.toUpperCase()}
+            title={planetName === '' ? 'Click on a planet!' : planetName.toUpperCase()}
             style={{ width: 300 }}
         >
             {props.planet !== '' ? fetchPlanetInfo(props.planet) : null}
