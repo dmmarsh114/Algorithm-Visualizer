@@ -7,31 +7,34 @@ const SolarSystemCard = (props) => {
     const [planetMoons, setPlanetMoons] = useState([]);
     const [sideralOrbit, setSideralOrbit] = useState('');
     const [sideralRotation, setSideralRotation] = useState('');
+    const [planetName, setPlanetName] = useState('');
 
-    const fetchPlanetInfo = () => {
-        fetch(`https://api.le-systeme-solaire.net/rest/bodies/${props.planet}`, {
+    const fetchPlanetInfo = (planet) => {
+        fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planet}`, {
             headers: {
                 'Accept': 'application/json'
             }
         }).then(res => res.json())
             .then(planetData => {
-                console.log(planetData);
+                setPlanetName(planetData.englishName);
                 setPlanetMass(planetData.mass.massValue);
                 setSideralOrbit(planetData.sideralOrbit);
                 setSideralRotation(planetData.sideralRotation);
                 if (planetData.moons === null) {
-                    setPlanetMoons('this planet does not have any moons :(')
+                    setPlanetMoons('0')
                 } else {
-                    setPlanetMoons(planetData.moons[0].moon);
+                    setPlanetMoons(planetData.moons.length);
                 }
+                props.setPlanet('');
             })
+
     }
 
 
     return (
         <Card title='facts' style={{ width: 300 }}>
             {props.planet !== '' ? fetchPlanetInfo(props.planet) : null}
-            <h4>{props.planet === '' ? 'click a planet pls' : props.planet.toUpperCase()}</h4>
+            <h4>{planetName === '' ? 'click a planet pls' : planetName.toUpperCase()}</h4>
             <p>Mass: {planetMass}</p>
             <p>Days in a year: {sideralOrbit}</p>
             <p>Hours in a day: {sideralRotation}</p>

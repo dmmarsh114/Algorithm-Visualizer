@@ -14,7 +14,7 @@ export default function SolarSystemPage(props) {
             </Tooltip>
 
             {/* MERCURY */}
-            <div className="spinner-1">
+            <div className="spinner-1" onClick={() => props.setPlanet('mercury')}>
                 <Tooltip placement="topRight" title="Mercury">
                     <img
                         src="https://img.icons8.com/color/48/000000/mercury-planet.png"
@@ -25,7 +25,7 @@ export default function SolarSystemPage(props) {
             </div>
 
             {/* VENUS */}
-            <div className="spinner-2">
+            <div className="spinner-2" onClick={() => props.setPlanet('venus')}>
                 <Tooltip placement="topRight" title="Venus">
                     <img
                         src="https://img.icons8.com/color/48/000000/venus-planet.png"
@@ -36,7 +36,7 @@ export default function SolarSystemPage(props) {
             </div>
 
             {/* EARTH */}
-            <div className="spinner-3">
+            <div className="spinner-3" onClick={() => props.setPlanet('earth')}>
                 <Tooltip placement="topRight" title="Earth">
                     <img
                         src="https://img.icons8.com/color/48/000000/earth-planet.png"
@@ -47,7 +47,7 @@ export default function SolarSystemPage(props) {
             </div>
 
             {/* MARS */}
-            <div className="spinner-4">
+            <div className="spinner-4" onClick={() => props.setPlanet('mars')}>
                 <Tooltip placement="topRight" title="Mars">
                     <img
                         src="https://img.icons8.com/color/48/000000/mars-planet.png"
@@ -58,7 +58,7 @@ export default function SolarSystemPage(props) {
             </div>
 
             {/* JUPITER */}
-            <div className="spinner-5">
+            <div className="spinner-5" onClick={() => props.setPlanet('jupiter')}>
                 <Tooltip placement="topRight" title="Jupiter">
                     <img
                         src="https://img.icons8.com/color/96/000000/jupiter-planet.png"
@@ -69,7 +69,7 @@ export default function SolarSystemPage(props) {
             </div>
 
             {/* SATURN */}
-            <div className="spinner-6">
+            <div className="spinner-6" onClick={() => props.setPlanet('saturn')}>
                 <Tooltip placement="topRight" title="Saturn">
                     <img
                         src="https://img.icons8.com/color/96/000000/saturn-planet.png"
@@ -80,7 +80,7 @@ export default function SolarSystemPage(props) {
             </div>
 
             {/* URANUS */}
-            <div className="spinner-7">
+            <div className="spinner-7" onClick={() => props.setPlanet('uranus')}>
                 <Tooltip placement="topRight" title="Uranus">
                     <img
                         src="https://img.icons8.com/color/48/000000/uranus-planet.png"
@@ -91,7 +91,7 @@ export default function SolarSystemPage(props) {
             </div>
 
             {/* NEPTUNE */}
-            <div className="spinner-8">
+            <div className="spinner-8" onClick={() => props.setPlanet('neptune')}>
                 <Tooltip placement="topRight" title="Neptune">
                     <img
                         src="https://img.icons8.com/color/48/000000/neptune-planet.png"
@@ -102,7 +102,7 @@ export default function SolarSystemPage(props) {
             </div>
 
             {/* PLUTO */}
-            <div className="spinner-9">
+            <div className="spinner-9" onClick={() => props.setPlanet('pluto')}>
                 <Tooltip placement="topRight" title="Pluto">
                     <img
                         src="https://img.icons8.com/color/48/000000/pluto-dwarf-planet.png"
