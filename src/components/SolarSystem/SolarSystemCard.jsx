@@ -38,17 +38,19 @@ const SolarSystemCard = (props) => {
                 <p>and {sideralRotation} hours in a day!</p>
                 {
                     numberOfMoons > 0 ?
-                        <p>{planetName} has {numberOfMoons} {numberOfMoons === 1 ? 'moon' : 'moons'}.</p>
+                        <a href="">
+                            <p>{planetName} has {numberOfMoons} {numberOfMoons === 1 ? 'moon' : 'moons'}.</p>
+                        </a>
                         : <p>{planetName} doesn't have any moons.</p>
                 }
-                <a href="">click here to learn more about {planetName}!</a>
+                <a href="">Click here to learn more about {planetName}!</a>
             </div>
         )
     }
 
     return (
         <Card
-            title={planetName === '' ? 'click a planet pls' : planetName.toUpperCase()}
+            title={planetName === '' ? 'Click on a planet to learn more about it!' : planetName.toUpperCase()}
             style={{ width: 300 }}
         >
             {props.planet !== '' ? fetchPlanetInfo(props.planet) : null}
