@@ -1,5 +1,5 @@
-class Planet {
-    constructor(distance, radius, color, orbitalSpeed = random(0.001, 0.005), angle = random(0, 10)) {
+export default class Planet {
+    constructor(distance, radius, color, orbitalSpeed, angle = 0) {
         this.distance = distance;
         this.radius = radius;
         this.color = color;
@@ -7,39 +7,28 @@ class Planet {
         this.orbitalSpeed = orbitalSpeed;
     }
 
-    show() {
-        push();
-        rotate(this.angle);
-        translate(this.distance, 0);
-        noStroke();
-        fill(this.color);
-        ellipse(0, 0, this.radius * 2);
-        pop();
+    show(p5) {
+        p5.push();
+        p5.rotate(this.angle);
+        p5.translate(this.distance, 0);
+        p5.noStroke();
+        p5.fill(this.color);
+        p5.ellipse(0, 0, this.radius * 2);
+        p5.pop();
     }
 
-    orbit() {
+    orbit(p5) {
         // draw orbital plane
-        stroke('white');
-        noFill();
-        ellipse(0, 0, this.distance * 2);
+        p5.stroke('white');
+        p5.noFill();
+        p5.ellipse(0, 0, this.distance * 2);
 
         // animate orbit
         this.angle = this.angle + this.orbitalSpeed
     }
-}
 
-class RingedPlanet extends Planet {
-
-    show() {
-        push();
-        stroke('white');
-        rotate(this.angle);
-        translate(this.distance, 0);
-        // draw rings
-        rotate(PI / 4);
-        ellipse(0, 0, this.radius * 4, this.radius / 2);
-        pop();
-        // draw planet as normal
-        super.show();
+    displayData(url) {
+        // fetch
+        // toggle modal
     }
 }
