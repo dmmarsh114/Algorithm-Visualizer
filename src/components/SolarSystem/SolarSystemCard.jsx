@@ -10,7 +10,7 @@ const SolarSystemCard = (props) => {
 
     const [sideralOrbit, setSideralOrbit] = useState('');
     const [sideralRotation, setSideralRotation] = useState('');
-  
+
     const [planetVolValue, setPlanetVolValue] = useState(0);
     const [planetVolExponent, setPlanetVolExponent] = useState(0);
 
@@ -38,19 +38,19 @@ const SolarSystemCard = (props) => {
     }
 
     const howManyEarths = (planet, value, exponent) => {
-        
+
         let planetBaseVol = value; //volValue from data
         let planetExponent = Math.pow(10, exponent); //15 = volExponent from data
-        
+
         let earthsBaseVol = 1.08321;
         let earthsExponent = Math.pow(10, 12);
         let earthsVol = earthsExponent * earthsBaseVol;
         let planetVol = planetExponent * planetBaseVol;
-        
-        return planetVol > earthsVol 
-        ? `There are ${Math.round(planetVol / earthsVol)} earth's inside of ${planet}.`
-        : ''
-        ;
+
+        return planetVol > earthsVol
+            ? `You could fit ${Math.round(planetVol / earthsVol)} earths inside of ${planet}.`
+            : ''
+            ;
     }
 
     const cardContent = () => {
@@ -60,11 +60,13 @@ const SolarSystemCard = (props) => {
                 <p>and {Math.round(sideralRotation)} hours in a day!</p>
                 {
                     numberOfMoons > 0 ?
-                        <p>{planetName} has {numberOfMoons} {numberOfMoons === 1 ? 'moon' : 'moons'}.</p>
+                        <a href="">
+                            <p>{planetName} has {numberOfMoons} {numberOfMoons === 1 ? 'moon' : 'moons'}.</p>
+                        </a>
                         : <p>{planetName} doesn't have any moons.</p>
                 }
                 <p>{howManyEarths(planetName, planetVolValue, planetVolExponent)}</p>
-                <a href="">click here to learn more about {planetName}!</a>
+                <a href="">Click here to learn more about {planetName}!</a>
             </div>
         )
     }
@@ -73,7 +75,7 @@ const SolarSystemCard = (props) => {
 
     return (
         <Card
-            title={planetName === '' ? 'click a planet pls' : planetName.toUpperCase()}
+            title={planetName === '' ? 'Click on a planet!' : planetName.toUpperCase()}
             style={{ width: 300 }}
         >
             {props.planet !== '' ? fetchPlanetInfo(props.planet) : null}
