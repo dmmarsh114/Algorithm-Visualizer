@@ -2,7 +2,7 @@ import React from 'react';
 import Sketch from 'react-p5';
 
 import Planet from './Planet';
-// import RingedPlanet from './RingedPlanet';
+import RingedPlanet from './RingedPlanet';
 
 const SolarSystem = (props) => {
 
@@ -24,7 +24,7 @@ const SolarSystem = (props) => {
         earth = new Planet(75, 7, 'blue', 0.012);
         mars = new Planet(105, 7, 'red', 0.01);
         jupiter = new Planet(150, 12, 'coral', 0.005);
-        saturn = new Planet(200, 9, 'tan', 0.004);
+        saturn = new RingedPlanet(200, 9, 'tan', 0.004);
         uranus = new Planet(300, 9, 'lightblue', 0.003);
         neptune = new Planet(250, 9, 'indigo', 0.0025);
         pluto = new Planet(350, 2, 'white', 0.0025);
