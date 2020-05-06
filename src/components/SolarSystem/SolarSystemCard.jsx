@@ -10,6 +10,9 @@ const SolarSystemCard = (props) => {
 
     const [sideralOrbit, setSideralOrbit] = useState('');
     const [sideralRotation, setSideralRotation] = useState('');
+  
+    const [planetVolValue, setPlanetVolValue] = useState(0);
+    const [planetVolExponent, setPlanetVolExponent] = useState(0);
 
     const fetchPlanetInfo = (planet) => {
         fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planet}`, {
@@ -21,6 +24,10 @@ const SolarSystemCard = (props) => {
                 setPlanetName(planetData.englishName);
                 setSideralOrbit(Math.round(planetData.sideralOrbit));
                 setSideralRotation(Math.round(planetData.sideralRotation));
+                setSideralOrbit(planetData.sideralOrbit);
+                setSideralRotation(planetData.sideralRotation);
+                setPlanetVolValue(planetData.vol.volValue)
+                setPlanetVolExponent(planetData.vol.volExponent)
                 if (planetData.moons === null) {
                     setNumberOfMoons('0')
                 } else {
@@ -28,7 +35,22 @@ const SolarSystemCard = (props) => {
                 }
                 props.setPlanet('');
             })
+    }
 
+    const howManyEarths = (planet, value, exponent) => {
+        
+        let planetBaseVol = value; //volValue from data
+        let planetExponent = Math.pow(10, exponent); //15 = volExponent from data
+        
+        let earthsBaseVol = 1.08321;
+        let earthsExponent = Math.pow(10, 12);
+        let earthsVol = earthsExponent * earthsBaseVol;
+        let planetVol = planetExponent * planetBaseVol;
+        
+        return planetVol > earthsVol 
+        ? `There are ${Math.round(planetVol / earthsVol)} earth's inside of ${planet}.`
+        : ''
+        ;
     }
 
     const cardContent = () => {
@@ -41,10 +63,13 @@ const SolarSystemCard = (props) => {
                         <p>{planetName} has {numberOfMoons} {numberOfMoons === 1 ? 'moon' : 'moons'}.</p>
                         : <p>{planetName} doesn't have any moons.</p>
                 }
+                <p>{howManyEarths(planetName, planetVolValue, planetVolExponent)}</p>
                 <a href="">click here to learn more about {planetName}!</a>
             </div>
         )
     }
+
+
 
     return (
         <Card
