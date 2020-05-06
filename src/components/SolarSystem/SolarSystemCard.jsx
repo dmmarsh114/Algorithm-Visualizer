@@ -3,11 +3,14 @@ import { Card } from 'antd';
 
 const SolarSystemCard = (props) => {
 
-    const [planetMass, setPlanetMass] = useState([]);
+    const [planetName, setPlanetName] = useState('');
+
+    const [numberOfMoons, setNumberOfMoons] = useState('');
     const [planetMoons, setPlanetMoons] = useState([]);
+
     const [sideralOrbit, setSideralOrbit] = useState('');
     const [sideralRotation, setSideralRotation] = useState('');
-    const [planetName, setPlanetName] = useState('');
+  
     const [planetVolValue, setPlanetVolValue] = useState(0);
     const [planetVolExponent, setPlanetVolExponent] = useState(0);
 
@@ -19,15 +22,16 @@ const SolarSystemCard = (props) => {
         }).then(res => res.json())
             .then(planetData => {
                 setPlanetName(planetData.englishName);
-                setPlanetMass(planetData.mass.massValue);
+                setSideralOrbit(Math.round(planetData.sideralOrbit));
+                setSideralRotation(Math.round(planetData.sideralRotation));
                 setSideralOrbit(planetData.sideralOrbit);
                 setSideralRotation(planetData.sideralRotation);
                 setPlanetVolValue(planetData.vol.volValue)
                 setPlanetVolExponent(planetData.vol.volExponent)
                 if (planetData.moons === null) {
-                    setPlanetMoons('0')
+                    setNumberOfMoons('0')
                 } else {
-                    setPlanetMoons(planetData.moons.length);
+                    setNumberOfMoons(planetData.moons.length);
                 }
                 props.setPlanet('');
             })
@@ -49,18 +53,31 @@ const SolarSystemCard = (props) => {
         ;
     }
 
+    const cardContent = () => {
+        return (
+            <div>
+                <p> {planetName} has {sideralOrbit} days in a year...</p>
+                <p>and {sideralRotation} hours in a day!</p>
+                {
+                    numberOfMoons > 0 ?
+                        <p>{planetName} has {numberOfMoons} {numberOfMoons === 1 ? 'moon' : 'moons'}.</p>
+                        : <p>{planetName} doesn't have any moons.</p>
+                }
+                <p>{howManyEarths(planetName, planetVolValue, planetVolExponent)}</p>
+                <a href="">click here to learn more about {planetName}!</a>
+            </div>
+        )
+    }
 
 
 
     return (
-        <Card title='facts' style={{ width: 300 }}>
+        <Card
+            title={planetName === '' ? 'click a planet pls' : planetName.toUpperCase()}
+            style={{ width: 300 }}
+        >
             {props.planet !== '' ? fetchPlanetInfo(props.planet) : null}
-            <h4>{planetName === '' ? 'click a planet pls' : planetName.toUpperCase()}</h4>
-            <p>Mass: {planetMass}</p>
-            <p>Days in a year: {sideralOrbit}</p>
-            <p>Hours in a day: {sideralRotation}</p>
-            <p>Moons: {planetMoons}</p>
-            <p>{howManyEarths(planetName, planetVolValue, planetVolExponent)}</p>
+            {planetName !== '' ? cardContent() : null}
         </Card>
     )
 }
