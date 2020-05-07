@@ -1,15 +1,25 @@
 import React from 'react'
 import { Tooltip } from 'antd';
+import SolarSystemCard from './SolarSystemCard'
 
 export default function SolarSystemPage(props) {
     return (
         <div className="solar-system">
+            <SolarSystemCard
+                planetName={props.planetName}
+                numberOfMoons={props.numberOfMoons}
+                sideralOrbit={props.sideralOrbit}
+                sideralRotation={props.sideralRotation}
+                planetVolValue={props.planetVolValue}
+                planetVolExponent={props.planetVolExponent}
+            />
             {/* SUN */}
             <Tooltip placement="topRight" title="The Sun">
                 <img
                     src="https://img.icons8.com/color/96/000000/sun-star.png"
                     onClick={() => props.fetchPlanetInfo('sun')}
                     className="sun"
+                    alt="the sun"
                 />
             </Tooltip>
 
@@ -20,6 +30,7 @@ export default function SolarSystemPage(props) {
                         src="https://img.icons8.com/color/48/000000/mercury-planet.png"
                         onClick={() => props.fetchPlanetInfo('mercury')}
                         className="mercury"
+                        alt="mercury"
                     />
                 </Tooltip>
             </div>
@@ -31,6 +42,7 @@ export default function SolarSystemPage(props) {
                         src="https://img.icons8.com/color/48/000000/venus-planet.png"
                         onClick={() => props.fetchPlanetInfo('venus')}
                         className="venus"
+                        alt="venus"
                     />
                 </Tooltip>
             </div>
@@ -42,6 +54,7 @@ export default function SolarSystemPage(props) {
                         src="https://img.icons8.com/color/48/000000/earth-planet.png"
                         onClick={() => props.fetchPlanetInfo('earth')}
                         className="earth"
+                        alt="earth"
                     />
                 </Tooltip>
             </div>
@@ -53,6 +66,7 @@ export default function SolarSystemPage(props) {
                         src="https://img.icons8.com/color/48/000000/mars-planet.png"
                         onClick={() => props.fetchPlanetInfo('mars')}
                         className="mars"
+                        alt="mars"
                     />
                 </Tooltip>
             </div>
@@ -64,6 +78,7 @@ export default function SolarSystemPage(props) {
                         src="https://img.icons8.com/color/96/000000/jupiter-planet.png"
                         onClick={() => props.fetchPlanetInfo('jupiter')}
                         className="jupiter"
+                        alt="jupiter"
                     />
                 </Tooltip>
             </div>
@@ -75,6 +90,7 @@ export default function SolarSystemPage(props) {
                         src="https://img.icons8.com/color/96/000000/saturn-planet.png"
                         onClick={() => props.fetchPlanetInfo('saturn')}
                         className="saturn"
+                        alt="saturn"
                     />
                 </Tooltip>
             </div>
@@ -86,6 +102,7 @@ export default function SolarSystemPage(props) {
                         src="https://img.icons8.com/color/48/000000/uranus-planet.png"
                         onClick={() => props.fetchPlanetInfo('uranus')}
                         className="uranus"
+                        alt="uranus"
                     />
                 </Tooltip>
             </div>
@@ -97,6 +114,7 @@ export default function SolarSystemPage(props) {
                         src="https://img.icons8.com/color/48/000000/neptune-planet.png"
                         onClick={() => props.fetchPlanetInfo('neptune')}
                         className="neptune"
+                        alt="neptune"
                     />
                 </Tooltip>
             </div>
@@ -108,6 +126,7 @@ export default function SolarSystemPage(props) {
                         src="https://img.icons8.com/color/48/000000/pluto-dwarf-planet.png"
                         onClick={() => props.fetchPlanetInfo('pluto')}
                         className="pluto"
+                        alt="pluto"
                     />
                 </Tooltip>
             </div>
