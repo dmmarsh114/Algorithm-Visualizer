@@ -1,7 +1,7 @@
 .solar-system-card {
     border: none !important;
     background-color: black !important;
-    color: white !important;
+    color: lightgray !important;
     margin-top: 8rem !important;
     margin-left: 3rem !important;
     min-width: 450px;
@@ -29,4 +29,10 @@
     height: 200px;
     background-size: initial;
     object-fit: cover;
+}
+
+.planet-desc {
+    margin-left: 20px;
+    max-width: 230px;
+    margin-top: 20px;
 }
