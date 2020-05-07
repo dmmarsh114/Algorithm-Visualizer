@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import './css/main.css'
 import 'antd/dist/antd.css';
@@ -11,13 +11,56 @@ import SolarSystemCard from './components/SolarSystem/SolarSystemCard';
 
 function App() {
 
-  const [planet, setPlanet] = React.useState('');
+  const [planetName, setPlanetName] = useState('');
+  const [numberOfMoons, setNumberOfMoons] = useState('');
+  const [planetMoons, setPlanetMoons] = useState([]);
+  const [sideralOrbit, setSideralOrbit] = useState('');
+  const [sideralRotation, setSideralRotation] = useState('');
+  const [planetVolValue, setPlanetVolValue] = useState(0);
+  const [planetVolExponent, setPlanetVolExponent] = useState(0);
+
+  const fetchPlanetInfo = (planet) => {
+
+    // clear previous values <-- this code may actually be unnecessary
+    // setPlanetName('');
+    // setNumberOfMoons('');
+    // setSideralOrbit('');
+    // setSideralRotation('');
+    // setPlanetVolValue('');
+    // setPlanetVolExponent('');
+
+    fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planet}`, {
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(res => res.json())
+      .then(planetData => {
+        setPlanetName(planetData.englishName);
+        setSideralOrbit(planetData.sideralOrbit);
+        setSideralRotation(planetData.sideralRotation);
+        setPlanetVolValue(planetData.vol.volValue);
+        setPlanetVolExponent(planetData.vol.volExponent);
+
+        if (planetData.moons === null) {
+          setNumberOfMoons('0')
+        } else {
+          setNumberOfMoons(planetData.moons.length);
+        }
+      })
+  }
 
   return (
     <div>
       <LandingPage />
-      <SolarSystemCard planet={planet} setPlanet={setPlanet} />
-      <SolarSystemPage planet={planet} setPlanet={setPlanet} />
+      <SolarSystemCard
+        planetName={planetName}
+        numberOfMoons={numberOfMoons}
+        sideralOrbit={sideralOrbit}
+        sideralRotation={sideralRotation}
+        planetVolValue={planetVolValue}
+        planetVolExponent={planetVolExponent}
+      />
+      <SolarSystemPage fetchPlanetInfo={fetchPlanetInfo} />
       <NextPage />
     </div>
   );

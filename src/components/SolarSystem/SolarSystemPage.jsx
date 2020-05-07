@@ -8,105 +8,105 @@ export default function SolarSystemPage(props) {
             <Tooltip placement="topRight" title="The Sun">
                 <img
                     src="https://img.icons8.com/color/96/000000/sun-star.png"
-                    onClick={() => props.setPlanet('sun')}
+                    onClick={() => props.fetchPlanetInfo('sun')}
                     className="sun"
                 />
             </Tooltip>
 
             {/* MERCURY */}
-            <div className="spinner-1" onClick={() => props.setPlanet('mercury')}>
+            <div className="spinner-1" onClick={() => props.fetchPlanetInfo('mercury')}>
                 <Tooltip placement="topRight" title="Mercury">
                     <img
                         src="https://img.icons8.com/color/48/000000/mercury-planet.png"
-                        onClick={() => props.setPlanet('mercury')}
+                        onClick={() => props.fetchPlanetInfo('mercury')}
                         className="mercury"
                     />
                 </Tooltip>
             </div>
 
             {/* VENUS */}
-            <div className="spinner-2" onClick={() => props.setPlanet('venus')}>
+            <div className="spinner-2" onClick={() => props.fetchPlanetInfo('venus')}>
                 <Tooltip placement="topRight" title="Venus">
                     <img
                         src="https://img.icons8.com/color/48/000000/venus-planet.png"
-                        onClick={() => props.setPlanet('venus')}
+                        onClick={() => props.fetchPlanetInfo('venus')}
                         className="venus"
                     />
                 </Tooltip>
             </div>
 
             {/* EARTH */}
-            <div className="spinner-3" onClick={() => props.setPlanet('earth')}>
+            <div className="spinner-3" onClick={() => props.fetchPlanetInfo('earth')}>
                 <Tooltip placement="topRight" title="Earth">
                     <img
                         src="https://img.icons8.com/color/48/000000/earth-planet.png"
-                        onClick={() => props.setPlanet('earth')}
+                        onClick={() => props.fetchPlanetInfo('earth')}
                         className="earth"
                     />
                 </Tooltip>
             </div>
 
             {/* MARS */}
-            <div className="spinner-4" onClick={() => props.setPlanet('mars')}>
+            <div className="spinner-4" onClick={() => props.fetchPlanetInfo('mars')}>
                 <Tooltip placement="topRight" title="Mars">
                     <img
                         src="https://img.icons8.com/color/48/000000/mars-planet.png"
-                        onClick={() => props.setPlanet('mars')}
+                        onClick={() => props.fetchPlanetInfo('mars')}
                         className="mars"
                     />
                 </Tooltip>
             </div>
 
             {/* JUPITER */}
-            <div className="spinner-5" onClick={() => props.setPlanet('jupiter')}>
+            <div className="spinner-5" onClick={() => props.fetchPlanetInfo('jupiter')}>
                 <Tooltip placement="topRight" title="Jupiter">
                     <img
                         src="https://img.icons8.com/color/96/000000/jupiter-planet.png"
-                        onClick={() => props.setPlanet('jupiter')}
+                        onClick={() => props.fetchPlanetInfo('jupiter')}
                         className="jupiter"
                     />
                 </Tooltip>
             </div>
 
             {/* SATURN */}
-            <div className="spinner-6" onClick={() => props.setPlanet('saturn')}>
+            <div className="spinner-6" onClick={() => props.fetchPlanetInfo('saturn')}>
                 <Tooltip placement="topRight" title="Saturn">
                     <img
                         src="https://img.icons8.com/color/96/000000/saturn-planet.png"
-                        onClick={() => props.setPlanet('saturn')}
+                        onClick={() => props.fetchPlanetInfo('saturn')}
                         className="saturn"
                     />
                 </Tooltip>
             </div>
 
             {/* URANUS */}
-            <div className="spinner-7" onClick={() => props.setPlanet('uranus')}>
+            <div className="spinner-7" onClick={() => props.fetchPlanetInfo('uranus')}>
                 <Tooltip placement="topRight" title="Uranus">
                     <img
                         src="https://img.icons8.com/color/48/000000/uranus-planet.png"
-                        onClick={() => props.setPlanet('uranus')}
+                        onClick={() => props.fetchPlanetInfo('uranus')}
                         className="uranus"
                     />
                 </Tooltip>
             </div>
 
             {/* NEPTUNE */}
-            <div className="spinner-8" onClick={() => props.setPlanet('neptune')}>
+            <div className="spinner-8" onClick={() => props.fetchPlanetInfo('neptune')}>
                 <Tooltip placement="topRight" title="Neptune">
                     <img
                         src="https://img.icons8.com/color/48/000000/neptune-planet.png"
-                        onClick={() => props.setPlanet('neptune')}
+                        onClick={() => props.fetchPlanetInfo('neptune')}
                         className="neptune"
                     />
                 </Tooltip>
             </div>
 
             {/* PLUTO */}
-            <div className="spinner-9" onClick={() => props.setPlanet('pluto')}>
+            <div className="spinner-9" onClick={() => props.fetchPlanetInfo('pluto')}>
                 <Tooltip placement="topRight" title="Pluto">
                     <img
                         src="https://img.icons8.com/color/48/000000/pluto-dwarf-planet.png"
-                        onClick={() => props.setPlanet('pluto')}
+                        onClick={() => props.fetchPlanetInfo('pluto')}
                         className="pluto"
                     />
                 </Tooltip>
