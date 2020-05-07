@@ -7,8 +7,6 @@ import SolarSystemPage from './components/SolarSystem/SolarSystemPage';
 import LandingPage from './components/Landing/LandingPage';
 import NextPage from './components/NextPage/NextPage';
 
-import SolarSystemCard from './components/SolarSystem/SolarSystemCard';
-
 function App() {
 
   const [planetName, setPlanetName] = useState('');
@@ -52,7 +50,8 @@ function App() {
   return (
     <div>
       <LandingPage />
-      <SolarSystemCard
+      <SolarSystemPage 
+        fetchPlanetInfo={fetchPlanetInfo}
         planetName={planetName}
         numberOfMoons={numberOfMoons}
         sideralOrbit={sideralOrbit}
@@ -60,7 +59,6 @@ function App() {
         planetVolValue={planetVolValue}
         planetVolExponent={planetVolExponent}
       />
-      <SolarSystemPage fetchPlanetInfo={fetchPlanetInfo} />
       <NextPage />
     </div>
   );
