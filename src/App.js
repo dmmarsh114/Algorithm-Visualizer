@@ -16,6 +16,7 @@ function App() {
   const [sideralRotation, setSideralRotation] = useState('');
   const [planetVolValue, setPlanetVolValue] = useState(0);
   const [planetVolExponent, setPlanetVolExponent] = useState(0);
+  const [planetGravity, setPlanetGravity] = useState(0);
 
   const fetchPlanetInfo = (planet) => {
 
@@ -38,6 +39,7 @@ function App() {
         setSideralRotation(planetData.sideralRotation);
         setPlanetVolValue(planetData.vol.volValue);
         setPlanetVolExponent(planetData.vol.volExponent);
+        setPlanetGravity(planetData.gravity)
 
         planetData.moons === null ? setNumberOfMoons('0') : setNumberOfMoons(planetData.moons.length);  
       })
@@ -54,6 +56,7 @@ function App() {
         sideralRotation={sideralRotation}
         planetVolValue={planetVolValue}
         planetVolExponent={planetVolExponent}
+        planetGravity={planetGravity}
       />
        <About />
       <NextPage />
