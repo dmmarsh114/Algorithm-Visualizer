@@ -1,18 +1,27 @@
 import React from 'react';
 import './App.css';
+import './css/main.css'
 import 'antd/dist/antd.css';
-import Planets from './components/solarSystemPage/Planets';
-import Tristan from './components/solarSystemPage/Tristan';
-// import Planet from './components/p5/Planet';
+// import Planets from './components/Taylor/Planets';
+// import Tristan from './components/Tristan/Tristan';
+import SolarSystemPage from './components/Tristan/SolarSystemPage';
+import Nav from './components/Tristan/Sitebar';
+import LandingPage from './components/Tristan/LandingPage';
+import About from './components/Tristan/About';
+import NextPage from './components/Tristan/NextPage';
 
 function App() {
   return (
     <div>
-      <h1>Tristan</h1>
+      {/* <h1>Tristan</h1>
       <Tristan />
       <h1>Taylor</h1>
-      <Planets />
-      {/* <Planet /> */}
+      <Planets /> */}
+      <Nav />
+      <LandingPage />
+      <About />
+      <SolarSystemPage />
+      <NextPage />
     </div>
   );
 }
