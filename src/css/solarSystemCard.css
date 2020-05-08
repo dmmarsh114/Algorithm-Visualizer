@@ -1,0 +1,38 @@
+.solar-system-card {
+    border: none !important;
+    background-color: black !important;
+    color: lightgray !important;
+    margin-top: 8rem !important;
+    margin-left: 3rem !important;
+    min-width: 450px;
+    min-height: 500px;
+}
+
+.ant-card-head {
+    border-color: lightgrey !important;
+    color: white !important;
+    font-size: 20px !important;
+    text-align: center;
+}
+
+.ant-card-body {
+    padding: 0 !important;
+    padding-top: 2rem !important;
+}
+
+.firstInfo {
+    display: flex;
+}
+
+.planet-img {
+    width: 200px;
+    height: 200px;
+    background-size: initial;
+    object-fit: cover;
+}
+
+.planet-desc {
+    margin-left: 20px;
+    max-width: 230px;
+    margin-top: 20px;
+}

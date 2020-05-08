@@ -1,6 +1,5 @@
 .solar-system {
-    height: 100vh !important;
-    background: black;
+    height: 80vh !important;
 }
  /*
         Orbital speeds (km/s)
@@ -29,7 +28,7 @@
     border-radius: 50%;
     border: var(--ring);
     transition: border 0.5s ease-out;
-    animation: spinner 10s linear infinite;
+    /* animation: spinner 10s linear infinite; */
     z-index: 10;
 }
 
@@ -50,7 +49,7 @@
     border-radius: 50%;
     border: var(--ring);
     transition: border 0.5s ease-out;
-    animation: spinner 14s linear infinite;
+    /* animation: spinner 14s linear infinite; */
     z-index: 9;
 }
 
@@ -71,7 +70,7 @@
     border-radius: 50%;
     border: var(--ring);
     transition: border 0.5s ease-out;
-    animation: spinner 20s linear infinite;
+    /* animation: spinner 20s linear infinite; */
     z-index: 8;
 }
 
@@ -92,7 +91,7 @@
     border-radius: 50%;
     border: var(--ring);
     transition: border 0.5s ease-out;
-    animation: spinner 26s linear infinite;
+    /* animation: spinner 26s linear infinite; */
     z-index: 7;
 }
 
@@ -113,7 +112,7 @@
     border-radius: 50%;
     border: var(--ring);
     transition: border 0.5s ease-out;
-    animation: spinner 30s linear infinite;
+    /* animation: spinner 30s linear infinite; */
     z-index: 6;
 }
 
@@ -134,7 +133,7 @@
     border-radius: 50%;
     border: var(--ring);
     transition: border 0.5s ease-out;
-    animation: spinner 34s linear infinite;
+    /* animation: spinner 34s linear infinite; */
     z-index: 5;
 }
 
@@ -155,7 +154,7 @@
     border-radius: 50%;
     border: var(--ring);
     transition: border 0.5s ease-out;
-    animation: spinner 38s linear infinite;
+    /* animation: spinner 38s linear infinite; */
     z-index: 4;
 }
 
@@ -176,7 +175,7 @@
     border-radius: 50%;
     border: var(--ring);
     transition: border 0.5s ease-out;
-    animation: spinner 42s linear infinite;
+    /* animation: spinner 42s linear infinite; */
     z-index: 3;
 }
 
@@ -197,7 +196,7 @@
     border-radius: 50%;
     border: var(--ring);
     transition: border 0.5s ease-out;
-    animation: spinner 48s linear infinite;
+    /* animation: spinner 48s linear infinite; */
     z-index: 2;
 }
 
@@ -244,7 +243,7 @@
 
 
 .mars {
-    margin-left: 85px;
+    margin-left: 80px;
     width: 18px;
     height: 18px;
     border-radius: 50%;

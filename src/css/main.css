@@ -1,4 +1,5 @@
 @import './solarSystem.css';
+@import './solarSystemCard.css';
 @import './landing.css';
 @import './nextPage.css';
 @import './nav.css';
@@ -15,4 +16,5 @@ body, html {
     background-size: cover;
     background: linear-gradient(155.33deg, #9FD9FF 7.17%, rgba(41, 86, 116, 0.888542) 22.79%, #000000 36.12%)!important;
     background-repeat: no-repeat !important;
+    background-color: black !important;
 }
