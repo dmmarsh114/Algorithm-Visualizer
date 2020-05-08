@@ -11,7 +11,6 @@ function App() {
 
   const [planetName, setPlanetName] = useState('');
   const [numberOfMoons, setNumberOfMoons] = useState('');
-  const [planetMoons, setPlanetMoons] = useState([]);
   const [sideralOrbit, setSideralOrbit] = useState('');
   const [sideralRotation, setSideralRotation] = useState('');
   const [planetVolValue, setPlanetVolValue] = useState(0);
@@ -33,17 +32,14 @@ function App() {
       }
     }).then(res => res.json())
       .then(planetData => {
+        console.log(planetData)
         setPlanetName(planetData.englishName);
         setSideralOrbit(planetData.sideralOrbit);
         setSideralRotation(planetData.sideralRotation);
         setPlanetVolValue(planetData.vol.volValue);
         setPlanetVolExponent(planetData.vol.volExponent);
 
-        if (planetData.moons === null) {
-          setNumberOfMoons('0')
-        } else {
-          setNumberOfMoons(planetData.moons.length);
-        }
+        planetData.moons === null ? setNumberOfMoons('0') : setNumberOfMoons(planetData.moons.length);  
       })
   }
 
