@@ -32,7 +32,6 @@ function App() {
       }
     }).then(res => res.json())
       .then(planetData => {
-        console.log(planetData)
         setPlanetName(planetData.englishName);
         setSideralOrbit(planetData.sideralOrbit);
         setSideralRotation(planetData.sideralRotation);
