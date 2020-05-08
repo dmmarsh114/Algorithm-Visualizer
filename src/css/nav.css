@@ -1,16 +1,15 @@
 .menu-wrap {
     background: transparent;
-    margin-top: 0 !important;
 }
 
 nav {
     font-family: "Muli", sans-serif;
-    margin-top: 30px;
 }
 
 nav ul li{
+
     display: inline-block;
-    padding: 5px 30px;
+    padding: 30px;
 }
 
 nav a { 
