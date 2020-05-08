@@ -5,25 +5,32 @@
 
 .title {
 color: white;
-font-family: Saira ExtraCondensed;
 font-style: normal;
+font-family: "Muli", sans-serif;
 font-weight: 900;
-font-size: 200px;
+font-size: 150px;
 mix-blend-mode: normal;
 opacity: 0.2;
 text-shadow: 12.6815px 12.6815px 95.1111px rgba(0, 0, 0, 0.2);
 backdrop-filter: blur(31.7037px);
+margin-top: 3rem;
+margin-left: 3rem;
+text-transform: uppercase;
+letter-spacing: 15px;
 }
 
 .title-two{
     color: white;
-font-family: Saira ExtraCondensed;
+    font-family: "Muli", sans-serif;
 font-style: normal;
 font-weight: 900;
-font-size: 200px;
+font-size: 150px;
 mix-blend-mode: normal;
 opacity: 0.2;
 text-shadow: 12.6815px 12.6815px 95.1111px rgba(0, 0, 0, 0.2);
 backdrop-filter: blur(31.7037px);
+text-align: center;
 line-height: .01;
+text-transform: uppercase;
+letter-spacing: 15px;
 }

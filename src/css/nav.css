@@ -1,6 +1,11 @@
+.menu-wrap {
+    background: transparent;
+    margin-top: 0 !important;
+}
+
 nav {
-    font-family: Saira ExtraCondensed;
-    margin-top: 10px; 
+    font-family: "Muli", sans-serif;
+    margin-top: 30px;
 }
 
 nav ul li{
