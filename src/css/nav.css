@@ -1,15 +1,15 @@
-
+.menu-wrap {
+    background: transparent;
+}
 
 nav {
-    background-color: 0 !important;
-    font-family: Saira ExtraCondensed;
-    margin-top: 10px;
+    font-family: "Muli", sans-serif;
 }
 
 nav ul li{
 
     display: inline-block;
-    padding: 5px 30px;
+    padding: 30px;
 }
 
 nav a { 
