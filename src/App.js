@@ -45,7 +45,7 @@ function App() {
   return (
     <div>
       <LandingPage />
-      <SolarSystemPage 
+      <SolarSystemPage
         fetchPlanetInfo={fetchPlanetInfo}
         planetName={planetName}
         numberOfMoons={numberOfMoons}

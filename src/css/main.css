@@ -2,7 +2,8 @@
 @import './solarSystemCard.css';
 @import './landing.css';
 @import './nextPage.css';
-
+@import './nav.css';
+@import './about.css';
 
 :root {
     /* color variables */
@@ -10,6 +11,10 @@
     --ring-hover: 2px solid white;
 }
 
-body {
+body, html {
+    height: 100%;
+    background-size: cover;
+    background: linear-gradient(155.33deg, #9FD9FF 7.17%, rgba(41, 86, 116, 0.888542) 22.79%, #000000 36.12%)!important;
+    background-repeat: no-repeat !important;
     background-color: black !important;
 }
