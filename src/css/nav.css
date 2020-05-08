@@ -1,9 +1,13 @@
+
+
 nav {
+    background-color: 0 !important;
     font-family: Saira ExtraCondensed;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 nav ul li{
+
     display: inline-block;
     padding: 5px 30px;
 }
