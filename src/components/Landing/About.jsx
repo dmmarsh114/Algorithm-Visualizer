@@ -5,7 +5,7 @@ export default function About() {
     return (
         <div id="about" className="about-page">
             <h1 style={{ color: "white" }}>About Us</h1>
-            <Row>
+            <Row gutter={[16, 16]}>
                 <Col span={12}>
                     <h2 style={{ color: "white" }}>Our Mission</h2>
                     <p style={{ color: "white" }}>Hello</p>
