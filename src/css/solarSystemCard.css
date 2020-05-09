@@ -1,6 +1,7 @@
 .solar-system-card {
     border: none !important;
     background-color: black !important;
+    font-family: 'Muli', sans-serif;
     color: lightgray !important;
     margin-top: 8rem !important;
     margin-left: 3rem !important;
@@ -34,5 +35,29 @@
 .planet-desc {
     margin-left: 20px;
     max-width: 230px;
+    margin-top: 20px;
+}
+
+.weight-input {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: black;
+    border: 1px solid white;
+}
+
+.placeholder-text {
+    font-size: 16px;
+    text-align: center;
+}
+
+.solar-system-img {
+    width: 450px;
+    height: 200px;
+    background-size: initial;
+    object-fit: cover;
+}
+
+.solar-system-desc {
     margin-top: 20px;
 }

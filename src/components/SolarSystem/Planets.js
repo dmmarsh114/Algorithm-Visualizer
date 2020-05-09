@@ -39,6 +39,10 @@
             Pluto: {
                 description: 'Pluto is an icy dwarf planet in the Kuiper belt, a ring of bodies beyond the orbit of Neptune. It was the first and the largest Kuiper belt object to be discovered.',
                 image: 'https://images-assets.nasa.gov/image/PIA19952/PIA19952~orig.jpg',  
+            },
+            SolarSystem: {
+                description: "The Solar System formed 4.6 billion years ago from the gravitational collapse of a giant interstellar molecular cloud. The four smaller inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets, being primarily composed of rock and metal. The four outer planets are giant planets, being substantially more massive than the terrestrials. The two largest, Jupiter and Saturn, are gas giants, being composed mainly of hydrogen and helium; the two outermost planets, Uranus and Neptune, are ice giants, being composed mostly of substances with relatively high melting points compared with hydrogen and helium, called volatiles, such as water, ammonia and methane.",
+                image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Planets2013.svg/2560px-Planets2013.svg.png'
             }
         }
 

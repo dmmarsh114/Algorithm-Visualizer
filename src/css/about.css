@@ -1,4 +1,5 @@
 .about-page {
+    overflow-x: hidden !important;
     height: 100vh;
     width: 100%;
     background-color: black;

@@ -4,7 +4,7 @@ import SolarSystemCard from './SolarSystemCard'
 
 export default function SolarSystemPage(props) {
     return (
-        <div className="solar-system">
+        <div id="solarSystem" className="solar-system">
             <SolarSystemCard
                 planetName={props.planetName}
                 numberOfMoons={props.numberOfMoons}
@@ -12,6 +12,7 @@ export default function SolarSystemPage(props) {
                 sideralRotation={props.sideralRotation}
                 planetVolValue={props.planetVolValue}
                 planetVolExponent={props.planetVolExponent}
+                planetGravity={props.planetGravity}
             />
             {/* SUN */}
             <Tooltip placement="topRight" title="The Sun">
