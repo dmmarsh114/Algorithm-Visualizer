@@ -2,6 +2,7 @@ import React, { useState }from 'react';
 import { Card } from 'antd';
 import planets from './Planets';
 
+
 const SolarSystemCard = (props) => {
 
     const [weight, setWeight] = useState(0);
@@ -32,6 +33,20 @@ const SolarSystemCard = (props) => {
         let earthsGravity = 9.8;
         let differenceInGravity = (gravity / earthsGravity);
         return Math.round(differenceInGravity * weight);
+    }
+
+    const defaultCardContent = () => {
+        return (
+            <div>
+                {/* solar system image and description */}
+                <img className="solar-system-img" src={chooseImg('SolarSystem')} alt="picture of solar system" />
+                <p className="solar-system-desc">
+                    {chooseDescription('SolarSystem')} <br />
+                </p>       
+                <a href={`https://en.wikipedia.org/wiki/Solar_System`} target="_blank">Read More</a>
+            </div>
+
+        )
     }
 
     const cardContent = () => {
@@ -78,15 +93,19 @@ const SolarSystemCard = (props) => {
         )
     }
 
+
     return (
         <Card
             className="solar-system-card"
-            title={props.planetName === '' ? 'Click on a planet!' : props.planetName.toUpperCase()}
+            title={props.planetName === '' ? 'click on a planet to start your journey!' : props.planetName.toUpperCase()}
             style={{ width: 300 }}
         >
-            {props.planetName !== '' ? cardContent() : null}
+            {props.planetName !== '' ? cardContent(): defaultCardContent()}
+            
         </Card>
     )
+        
+    
 }
 
 export default SolarSystemCard;

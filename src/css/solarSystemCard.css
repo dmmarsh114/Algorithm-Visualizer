@@ -45,3 +45,19 @@
     background-color: black;
     border: 1px solid white;
 }
+
+.placeholder-text {
+    font-size: 16px;
+    text-align: center;
+}
+
+.solar-system-img {
+    width: 450px;
+    height: 200px;
+    background-size: initial;
+    object-fit: cover;
+}
+
+.solar-system-desc {
+    margin-top: 20px;
+}

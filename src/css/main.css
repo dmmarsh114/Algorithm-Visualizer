@@ -11,6 +11,9 @@
     --ring: 1px solid lightgray;
     --ring-hover: 2px solid white;
 }
+html { 
+    scroll-behavior: smooth;
+}
 
 body, html {
     height: 100%;

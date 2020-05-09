@@ -18,7 +18,7 @@ function App() {
   const [planetVolExponent, setPlanetVolExponent] = useState(0);
   const [planetGravity, setPlanetGravity] = useState(0);
 
-  const fetchPlanetInfo = (planet) => {
+  const fetchPlanetInfo = async (planet) => {
 
     // clear previous values <-- this code may actually be unnecessary
     // setPlanetName('');
@@ -28,7 +28,7 @@ function App() {
     // setPlanetVolValue('');
     // setPlanetVolExponent('');
 
-    fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planet}`, {
+    await fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planet}`, {
       headers: {
         'Accept': 'application/json'
       }

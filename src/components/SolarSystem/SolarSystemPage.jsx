@@ -4,7 +4,7 @@ import SolarSystemCard from './SolarSystemCard'
 
 export default function SolarSystemPage(props) {
     return (
-        <div className="solar-system">
+        <div id="solarSystem" className="solar-system">
             <SolarSystemCard
                 planetName={props.planetName}
                 numberOfMoons={props.numberOfMoons}
