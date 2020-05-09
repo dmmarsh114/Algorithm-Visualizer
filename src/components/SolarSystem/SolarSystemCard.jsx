@@ -83,7 +83,11 @@ const SolarSystemCard = (props) => {
                             <label>Find out how much you weigh on {props.planetName}</label>
                             <br />
                             <input className="weight-input" onChange={e => setWeight(e.target.value)} placeholder="Enter weight in lbs"></input>
-                            <p>You weigh {weightConverter(props.planetGravity)}lbs on {props.planetName}!</p>
+                            {
+                                weight !== 0 ? 
+                                <p>You weigh {weightConverter(props.planetGravity)}lbs on {props.planetName}!</p>
+                                : ''
+                            }   
                         </div>
                     : ''
                 }
@@ -97,7 +101,7 @@ const SolarSystemCard = (props) => {
     return (
         <Card
             className="solar-system-card"
-            title={props.planetName === '' ? 'click on a planet to start your journey!' : props.planetName.toUpperCase()}
+            title={props.planetName === '' ? 'Click on a planet to start your journey!' : props.planetName.toUpperCase()}
             style={{ width: 300 }}
         >
             {props.planetName !== '' ? cardContent(): defaultCardContent()}
