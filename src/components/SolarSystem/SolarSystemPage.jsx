@@ -12,6 +12,7 @@ export default function SolarSystemPage(props) {
                 sideralRotation={props.sideralRotation}
                 planetVolValue={props.planetVolValue}
                 planetVolExponent={props.planetVolExponent}
+                planetGravity={props.planetGravity}
             />
             {/* SUN */}
             <Tooltip placement="topRight" title="The Sun">

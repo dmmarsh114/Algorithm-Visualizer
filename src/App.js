@@ -16,18 +16,10 @@ function App() {
   const [sideralRotation, setSideralRotation] = useState('');
   const [planetVolValue, setPlanetVolValue] = useState(0);
   const [planetVolExponent, setPlanetVolExponent] = useState(0);
+  const [planetGravity, setPlanetGravity] = useState(0);
 
-  const fetchPlanetInfo = (planet) => {
-
-    // clear previous values <-- this code may actually be unnecessary
-    // setPlanetName('');
-    // setNumberOfMoons('');
-    // setSideralOrbit('');
-    // setSideralRotation('');
-    // setPlanetVolValue('');
-    // setPlanetVolExponent('');
-
-    fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planet}`, {
+  const fetchPlanetInfo = async (planet) => {
+    await fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planet}`, {
       headers: {
         'Accept': 'application/json'
       }
@@ -38,8 +30,8 @@ function App() {
         setSideralRotation(planetData.sideralRotation);
         setPlanetVolValue(planetData.vol.volValue);
         setPlanetVolExponent(planetData.vol.volExponent);
-
-        planetData.moons === null ? setNumberOfMoons('0') : setNumberOfMoons(planetData.moons.length);
+        setPlanetGravity(planetData.gravity)
+        planetData.moons === null ? setNumberOfMoons('0') : setNumberOfMoons(planetData.moons.length);  
       })
   }
 
@@ -54,6 +46,7 @@ function App() {
         sideralRotation={sideralRotation}
         planetVolValue={planetVolValue}
         planetVolExponent={planetVolExponent}
+        planetGravity={planetGravity}
       />
       <About />
       <Footer />

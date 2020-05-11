@@ -11,11 +11,17 @@
     --ring: 1px solid lightgray;
     --ring-hover: 2px solid white;
 }
+html { 
+    scroll-behavior: smooth;
+}
 
 body, html {
     height: 100%;
     background-size: cover;
     background: linear-gradient(155.33deg, #9FD9FF 7.17%, rgba(41, 86, 116, 0.888542) 22.79%, #000000 36.12%)!important;
     background-repeat: no-repeat !important;
-    background-color: black !important;
+    background-color: black !important;   
+}
+body {
+    overflow-x: hidden;
 }

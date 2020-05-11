@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState }from 'react';
 import { Card } from 'antd';
 import planets from './Planets';
 
+
 const SolarSystemCard = (props) => {
+
+    const [weight, setWeight] = useState(0);
 
     const chooseImg = (name) => {
         return planets[name].image
@@ -24,6 +27,26 @@ const SolarSystemCard = (props) => {
             ? `You could fit ${Math.round(planetVol / earthsVol)} Earths inside of ${planet}.`
             : ''
             ;
+    }
+
+    const weightConverter = (gravity) => {
+        let earthsGravity = 9.8;
+        let differenceInGravity = (gravity / earthsGravity);
+        return Math.round(differenceInGravity * weight);
+    }
+
+    const defaultCardContent = () => {
+        return (
+            <div>
+                {/* solar system image and description */}
+                <img className="solar-system-img" src={chooseImg('SolarSystem')} alt="picture of solar system" />
+                <p className="solar-system-desc">
+                    {chooseDescription('SolarSystem')} <br />
+                </p>       
+                <a href={`https://en.wikipedia.org/wiki/Solar_System`} target="_blank">Read More</a>
+            </div>
+
+        )
     }
 
     const cardContent = () => {
@@ -50,21 +73,43 @@ const SolarSystemCard = (props) => {
                         </div>
                         : ''
                 }
+                {/* cool earth fact */}
                 <p>{howManyEarths(props.planetName, props.planetVolValue, props.planetVolExponent)}</p>
+
+                {/* weight fact */}
+                {
+                    props.planetName !== 'Earth' && props.planetName !== 'Sun' ?
+                        <div>
+                            <label>Find out how much you weigh on {props.planetName}</label>
+                            <br />
+                            <input className="weight-input" onChange={e => setWeight(e.target.value)} placeholder="Enter weight in lbs"></input>
+                            {
+                                weight !== 0 ? 
+                                <p>You weigh {weightConverter(props.planetGravity)}lbs on {props.planetName}!</p>
+                                : ''
+                            }   
+                        </div>
+                    : ''
+                }
+                
                 <a href="">Click here to learn more about {props.planetName}!</a>
             </div>
         )
     }
 
+
     return (
         <Card
             className="solar-system-card"
-            title={props.planetName === '' ? 'Click on a planet!' : props.planetName.toUpperCase()}
+            title={props.planetName === '' ? 'Click on a planet to start your journey!' : props.planetName.toUpperCase()}
             style={{ width: 300 }}
         >
-            {props.planetName !== '' ? cardContent() : null}
+            {props.planetName !== '' ? cardContent(): defaultCardContent()}
+            
         </Card>
     )
+        
+    
 }
 
 export default SolarSystemCard;
