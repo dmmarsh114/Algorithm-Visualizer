@@ -8,6 +8,7 @@ export default function SolarSystemPage(props) {
             <SolarSystemCard
                 planetName={props.planetName}
                 numberOfMoons={props.numberOfMoons}
+                moons={props.moons}
                 sideralOrbit={props.sideralOrbit}
                 sideralRotation={props.sideralRotation}
                 planetVolValue={props.planetVolValue}

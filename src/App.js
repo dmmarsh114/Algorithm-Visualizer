@@ -12,6 +12,7 @@ function App() {
 
   const [planetName, setPlanetName] = useState('');
   const [numberOfMoons, setNumberOfMoons] = useState('');
+  const [moons, setMoons] = useState([]);
   const [sideralOrbit, setSideralOrbit] = useState('');
   const [sideralRotation, setSideralRotation] = useState('');
   const [planetVolValue, setPlanetVolValue] = useState(0);
@@ -31,7 +32,14 @@ function App() {
         setPlanetVolValue(planetData.vol.volValue);
         setPlanetVolExponent(planetData.vol.volExponent);
         setPlanetGravity(planetData.gravity)
-        planetData.moons === null ? setNumberOfMoons('0') : setNumberOfMoons(planetData.moons.length);  
+        // planetData.moons === null ? setNumberOfMoons('0') : setNumberOfMoons(planetData.moons.length);  
+        if (planetData.moons === null) {
+          setNumberOfMoons('0');
+          setMoons('');
+        } else {
+          setNumberOfMoons(planetData.moons.length);
+          setMoons(planetData.moons);
+        }
       })
   }
 
@@ -42,14 +50,15 @@ function App() {
         fetchPlanetInfo={fetchPlanetInfo}
         planetName={planetName}
         numberOfMoons={numberOfMoons}
+        moons={moons}
         sideralOrbit={sideralOrbit}
         sideralRotation={sideralRotation}
         planetVolValue={planetVolValue}
         planetVolExponent={planetVolExponent}
         planetGravity={planetGravity}
       />
-      <About />
-      <Footer />
+      {/* <About />
+      <Footer /> */}
     </div>
   );
 }
