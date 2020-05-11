@@ -6,7 +6,7 @@ import 'antd/dist/antd.css';
 import SolarSystemPage from './components/SolarSystem/SolarSystemPage';
 import LandingPage from './components/Landing/LandingPage';
 import About from './components/Landing/About';
-import NextPage from './components/NextPage/NextPage';
+import Footer from './components/NextPage/Footer';
 
 function App() {
 
@@ -48,8 +48,8 @@ function App() {
         planetVolExponent={planetVolExponent}
         planetGravity={planetGravity}
       />
-       <About />
-      <NextPage />
+      <About />
+      <Footer />
     </div>
   );
 }

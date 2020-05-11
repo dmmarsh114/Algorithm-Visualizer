@@ -1,0 +1,27 @@
+.footer {
+    font-style: normal;
+    font-family: "Muli", sans-serif;
+    height: 30vh;
+    width: 100%;
+    background-color: black;
+}
+
+.footer-title {
+    color: white;
+    text-align: center;
+}
+
+.footer-copy-r {
+    color: white;
+    text-align: center;
+}
+
+.ant-form {
+    max-width: 600px;
+    min-width: 500px;
+}
+
+.contact-title {
+    margin-left: 12rem;
+    margin-right: auto;
+}

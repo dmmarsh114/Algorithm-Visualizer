@@ -14,8 +14,8 @@
     opacity: 0.2;
     text-shadow: 12.6815px 12.6815px 95.1111px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(31.7037px);
+    text-align: center;
     margin-top: 3rem;
-    margin-left: 3rem;
     text-transform: uppercase;
     letter-spacing: 15px;
 }
