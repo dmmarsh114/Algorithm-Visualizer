@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import './App.css';
 import './css/main.css'
 import 'antd/dist/antd.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import SolarSystemPage from './components/SolarSystem/SolarSystemPage';
 import LandingPage from './components/Landing/LandingPage';
-import About from './components/Landing/About';
 import Footer from './components/NextPage/Footer';
+import About from './components/Landing/About';
 
 function App() {
 
@@ -37,19 +39,27 @@ function App() {
 
   return (
     <div>
-      <LandingPage />
-      <SolarSystemPage
-        fetchPlanetInfo={fetchPlanetInfo}
-        planetName={planetName}
-        numberOfMoons={numberOfMoons}
-        sideralOrbit={sideralOrbit}
-        sideralRotation={sideralRotation}
-        planetVolValue={planetVolValue}
-        planetVolExponent={planetVolExponent}
-        planetGravity={planetGravity}
-      />
-      <About />
-      <Footer />
+      <Router>
+        <Switch>
+                <Route exact path="/about">
+                    <About />
+                </Route>
+                <Route exact path="/home">
+                  <LandingPage />
+                  <SolarSystemPage
+                    fetchPlanetInfo={fetchPlanetInfo}
+                    planetName={planetName}
+                    numberOfMoons={numberOfMoons}
+                    sideralOrbit={sideralOrbit}
+                    sideralRotation={sideralRotation}
+                    planetVolValue={planetVolValue}
+                    planetVolExponent={planetVolExponent}
+                    planetGravity={planetGravity}
+                  />
+                </Route>
+            </Switch>
+            <Footer />
+      </Router>
     </div>
   );
 }

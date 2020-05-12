@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Button, Card } from 'antd';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
@@ -10,6 +11,7 @@ const { Meta } = Card;
 export default function About() {
     return (
         <div id="about" className="about-page">
+            <Link to="home">Back</Link>
             <Row justify="center" align="middle" gutter={[16, 16]}>
                 <Col span={14}>
                     <h1 style={{ color: "white" }}>Our Mission</h1>
