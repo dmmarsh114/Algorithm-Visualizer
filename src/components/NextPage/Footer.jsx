@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Input, Row, Col, Button } from 'antd';
+import { Link } from 'react-router-dom';
 
 const layout = {
     labelCol: { span: 8 },
@@ -20,7 +21,7 @@ export default function Footer() {
     return (
         <div id="footer" className="footer">
             <Row justify="space-between" align="middle">
-                <Col span={12}>
+                {/* <Col span={12}>
                     <Form {...layout} className="contact-form" onFinish={onFinish} validateMessages={validateMessages}>
                         <h1 className="contact-title" style={{ color: 'white' }}>Contact</h1>
                         <Form.Item name={['user', 'name']} label="Name" >
@@ -38,11 +39,13 @@ export default function Footer() {
                             </Button>
                         </Form.Item>
                     </Form>
-                </Col>
+                </Col> */}
+                <Link to="/about">About</Link>
                 <Col span={12}>
                     <p className="footer-copy-r">&copy;2020 Taylor Dickens, Tristan Oshier, Daniel Marsh</p>
                 </Col>
             </Row>
+            
         </div>
     )
 }
