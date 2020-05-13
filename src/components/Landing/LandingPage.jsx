@@ -10,7 +10,7 @@ export default function LandingPage() {
             <h1 className="title-two">Visualizer</h1>
         
             <Row justify="center">
-                <a href="#solar-system"><Button className="landing-bttn" shape="round" >Scroll Down</Button></a>
+                <a href="#solar-system"><Button className="landing-bttn" shape="round" size="large">Explore</Button></a>
             </Row>
         </div>
     )
