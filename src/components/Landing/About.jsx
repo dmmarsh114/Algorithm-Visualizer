@@ -11,7 +11,7 @@ const { Meta } = Card;
 export default function About() {
     return (
         <div id="about" className="about-page">
-            <Link to="/">Back</Link>
+            <Link to="/"><Button shape="round" className="about-back-bttn">Back</Button></Link>
             <Row justify="center" align="middle" gutter={[16, 16]}>
                 <Col span={14}>
                     <h1 style={{ color: "white" }}>Our Mission</h1>
