@@ -64,12 +64,20 @@
 
 @media (max-width: 1250px) {
     .solar-system-card {
-        display: none;
+      margin-top: 60rem !important;
+      margin-left: 24rem !important;
     }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 1250px) {
     .solar-system-card {
-        display: none;
+      margin-left: 19rem !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .solar-system-card {
+        margin-top: 40rem !important;
+        margin-left: 1rem !important;
     }
 }
