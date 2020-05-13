@@ -289,3 +289,213 @@
         transform: rotate(360deg);
     }
 }
+
+@media (max-width: 1250px) {
+
+    .spinner-9 {
+        left: 35%;
+    }
+    .spinner-8 {
+        left: 35%;
+    }
+    .spinner-7 {
+        left: 35%;
+    }
+    .spinner-6 {
+        left: 35%;
+    }
+    .spinner-5 {
+        left: 35%;
+    }
+    .spinner-4 {
+        left: 35%;
+    }
+    .spinner-3 {
+        left: 35%;
+    }
+    .spinner-2 {
+        left: 35%;
+    }
+    .spinner-1 {
+        left: 35%;
+    }
+
+    .sun {
+        left: 35%;
+    }
+}
+
+@media (max-width: 1250px) {
+
+    .spinner-9 {
+        left: 35%;
+    }
+    .spinner-8 {
+        left: 35%;
+    }
+    .spinner-7 {
+        left: 35%;
+    }
+    .spinner-6 {
+        left: 35%;
+    }
+    .spinner-5 {
+        left: 35%;
+    }
+    .spinner-4 {
+        left: 35%;
+    }
+    .spinner-3 {
+        left: 35%;
+    }
+    .spinner-2 {
+        left: 35%;
+    }
+    .spinner-1 {
+        left: 35%;
+    }
+
+    .sun {
+        left: 35%;
+    }
+}
+
+@media (max-width: 414px) {
+
+    .spinner-1 {
+        top: 47%;
+        left: 7%;
+        margin-top: 710px;
+        margin-left: 142px;
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .spinner-2 {
+        top: 47%;
+        left: 7%;
+        margin-top: 690px;
+        margin-left: 122px;
+        height: 6.5rem; 
+        width: 6.5rem;
+    }
+    
+    .spinner-3 {
+        top: 47%;
+        left: 10%;
+        margin-top: 670px;
+        margin-left: 94px;
+        height: 9rem; 
+        width: 9rem;   
+    }
+
+    .spinner-4 {
+        top: 47%;
+        left: 12%;
+        margin-top: 654px;
+        margin-left: 70px;
+        height: 11rem;
+        width: 11rem;
+    }
+
+    .spinner-5 {
+        top: 47%;
+        left: 17%;
+        margin-top: 620px;
+        height: 15rem;
+        width: 15rem;
+    }
+
+    .spinner-6 {
+        top: 47%;
+        left: 25%;
+        margin-top: 600px;
+        height: 18rem;
+        width: 18rem;
+    }
+
+    .spinner-7 {
+        top: 47%;
+        left: 30%;
+        margin-top: 573px;
+        height: 21rem;
+        width: 21rem;
+    }
+
+    .spinner-8 {
+        top: 47%;
+        left: 31%;
+        margin-top: 550px;
+        height: 24rem;
+        width: 24rem;
+    }
+    
+    .spinner-9 {
+        display: none;
+    }
+
+    .sun {
+        height: 3rem;
+        width: 3rem;
+        position: absolute;
+        top: 47%;
+        left: 7%;
+        margin-top: 718px;
+        margin-left: 150px;
+    }
+
+    .mercury {
+        margin-left: 47px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+    }
+
+    .venus {
+        margin-left: 74px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+    }
+
+    .earth {
+        margin-left: 100px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+    }
+
+    .mars {
+        margin-left: 122px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+    }
+
+    .jupiter {
+        margin-left: 50px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+
+    .saturn {
+        margin-left: 190px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .uranus {
+        margin-left: 220px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .neptune {
+        margin-left: 250px;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+    }
+    
+}
