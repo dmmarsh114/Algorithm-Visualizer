@@ -46,3 +46,9 @@
 .about-icon-linked:hover {
     color: grey;
 }
+
+.about-back-bttn {
+    background-color: black !important;
+    color: white !important;
+    margin: 1em;
+}

@@ -6,19 +6,19 @@
     background-color: black;
 }
 
-.footer-title {
-    color: white;
-    text-align: center;
+.footer-col-about {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-bttn {
+    background-color: black !important;
 }
 
 .footer-copy-r {
     color: white;
     text-align: center;
-}
-
-.ant-form {
-    max-width: 600px;
-    min-width: 500px;
 }
 
 .contact-title {
