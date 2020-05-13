@@ -10,7 +10,7 @@ export default function LandingPage() {
             <Spring
                 from={{ opacity: 0 }}
                 to={{ opacity: 1 }}
-                config={{ delay: 1000, duration: 1000 }}
+                config={{ delay: 500, duration: 1000 }}
             >
                 {props => (
                     <div style={props}>
