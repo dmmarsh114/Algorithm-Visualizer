@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Tooltip } from 'antd';
 import SolarSystemCard from './SolarSystemCard'
 
 export default function SolarSystemPage(props) {
+
     return (
         <div id="solar-system" className="solar-system">
             <SolarSystemCard
