@@ -63,6 +63,9 @@ export default function About() {
                     <a href="https://github.com/taylordickens17" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon className="about-icon-git" size="2x" icon={faGithubSquare} />
                     </a>
+                    <a href="mailto:justindickens17@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon className="about-icon-git" size="2x" icon={faEnvelopeSquare} />
+                    </a>
                 </Card>
             </Row>
         </div>
