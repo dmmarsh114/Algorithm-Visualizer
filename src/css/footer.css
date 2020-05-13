@@ -1,4 +1,5 @@
 .footer {
+    overflow-x: hidden;
     font-style: normal;
     font-family: "Muli", sans-serif;
     height: 30vh;
@@ -6,9 +7,14 @@
     background-color: black;
 }
 
-.footer-title {
-    color: white;
-    text-align: center;
+.footer-col-about {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-bttn {
+    background-color: black !important;
 }
 
 .footer-copy-r {
@@ -16,12 +22,13 @@
     text-align: center;
 }
 
-.ant-form {
-    max-width: 600px;
-    min-width: 500px;
-}
-
 .contact-title {
     margin-left: 12rem;
     margin-right: auto;
+}
+
+@media (max-width: 1315px) {
+    .footer {
+        margin-top: 10rem;
+    }
 }
