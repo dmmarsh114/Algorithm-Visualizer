@@ -33,7 +33,7 @@ function App() {
         setPlanetVolValue(planetData.vol.volValue);
         setPlanetVolExponent(planetData.vol.volExponent);
         setPlanetGravity(planetData.gravity)
-        planetData.moons === null ? setNumberOfMoons('0') : setNumberOfMoons(planetData.moons.length);  
+        planetData.moons === null ? setNumberOfMoons('0') : setNumberOfMoons(planetData.moons.length);
       })
   }
 
@@ -41,24 +41,24 @@ function App() {
     <div>
       <Router>
         <Switch>
-                <Route exact path="/about">
-                    <About />
-                </Route>
-                <Route exact path="/home">
-                  <LandingPage />
-                  <SolarSystemPage
-                    fetchPlanetInfo={fetchPlanetInfo}
-                    planetName={planetName}
-                    numberOfMoons={numberOfMoons}
-                    sideralOrbit={sideralOrbit}
-                    sideralRotation={sideralRotation}
-                    planetVolValue={planetVolValue}
-                    planetVolExponent={planetVolExponent}
-                    planetGravity={planetGravity}
-                  />
-                </Route>
-            </Switch>
-            <Footer />
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/">
+            <LandingPage />
+            <SolarSystemPage
+              fetchPlanetInfo={fetchPlanetInfo}
+              planetName={planetName}
+              numberOfMoons={numberOfMoons}
+              sideralOrbit={sideralOrbit}
+              sideralRotation={sideralRotation}
+              planetVolValue={planetVolValue}
+              planetVolExponent={planetVolExponent}
+              planetGravity={planetGravity}
+            />
+          </Route>
+        </Switch>
+        <Footer />
       </Router>
     </div>
   );

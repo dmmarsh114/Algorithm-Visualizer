@@ -11,7 +11,7 @@ const { Meta } = Card;
 export default function About() {
     return (
         <div id="about" className="about-page">
-            <Link to="home"><Button className="about-back-bttn" shape="round">Back</Button></Link>
+            <Link to="/">Back</Link>
             <Row justify="center" align="middle" gutter={[16, 16]}>
                 <Col span={14}>
                     <h1 style={{ color: "white" }}>Our Mission</h1>
@@ -24,10 +24,10 @@ export default function About() {
             <Row justify="center" align="middle">
                 <Card
                     style={{ width: 240, margin: '10px', backgroundColor: 'black' }}
-                    cover={<img alt="Daniel" src={require('../../css/assets/TaylorDickensSmaller.jpg')} />}
+                    cover={<img alt="Daniel" src={require('../../assets/DanielMarsh3.jpg')} />}
                     bordered={false}
                 >
-                    <Meta title="Daniel Marsh" description="Daniel Marsh description" style={{ marginLeft: 5 }} />
+                    <Meta title="Daniel Marsh" description="I am a full-stack web developer who spends my free time making useless things with code. Feel free to connect with me on LinkedIn!" style={{ marginLeft: 5 }} />
                     <a href="https://www.linkedin.com/in/daniel-marsh-843aa5b7/" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon className="about-icon-linked" size="2x" icon={faLinkedin} />
                     </a>
@@ -35,6 +35,7 @@ export default function About() {
                         <FontAwesomeIcon className="about-icon-git" size="2x" icon={faGithubSquare} />
                     </a>
                 </Card>
+
                 <Card
                     style={{ width: 240, margin: '10px', backgroundColor: 'black' }}
                     cover={<img alt="Tristan" src={require('../../assets/TristanOshier.jpg')} />}
@@ -51,6 +52,7 @@ export default function About() {
                         <FontAwesomeIcon className="about-icon-git" size="2x" icon={faEnvelopeSquare} />
                     </a>
                 </Card>
+
                 <Card
                     style={{ width: 240, margin: '10px', backgroundColor: 'black' }}
                     cover={<img alt="Taylor" src={require('../../css/assets/TaylorDickensSmaller.jpg')} />}
