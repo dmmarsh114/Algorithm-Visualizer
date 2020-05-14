@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { Card } from 'antd';
 import planets from './Planets';
 
@@ -6,6 +8,12 @@ import planets from './Planets';
 const SolarSystemCard = (props) => {
 
     const [weight, setWeight] = useState(0);
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000
+        })
+    })
 
     const chooseImg = (name) => {
         return planets[name].image
@@ -112,6 +120,7 @@ const SolarSystemCard = (props) => {
             className="solar-system-card"
             title={props.planetName === '' ? 'Click on a planet to start your journey!' : props.planetName.toUpperCase()}
             style={{ width: 300 }}
+            data-aos="fade-right"
         >
             {props.planetName !== '' ? cardContent() : defaultCardContent()}
 

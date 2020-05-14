@@ -2,9 +2,10 @@
     overflow-x: hidden;
     font-style: normal;
     font-family: "Muli", sans-serif;
-    height: 30vh;
+    height: 20vh;
     width: 100%;
     background-color: black;
+    text-align: center;
 }
 
 .footer-col-about {
