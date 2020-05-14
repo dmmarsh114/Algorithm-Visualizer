@@ -11,7 +11,7 @@ const { Meta } = Card;
 export default function About() {
     return (
         <div id="about" className="about-page">
-            <Link to="/">Back</Link>
+            <Link to="/"><Button shape="round" className="about-back-bttn">Back</Button></Link>
             <Row justify="center" align="middle" gutter={[16, 16]}>
                 <Col span={14}>
                     <h1 style={{ color: "white" }}>Our Mission</h1>
@@ -58,12 +58,15 @@ export default function About() {
                     cover={<img alt="Taylor" src={require('../../css/assets/TaylorDickensSmaller.jpg')} />}
                     bordered={false}
                 >
-                    <Meta title="Taylor Dickens" description="Taylor Dickens description" style={{ marginLeft: 5 }} />
+                    <Meta title="Taylor Dickens" description="I am an eager full stack developer who is exceptionally passionate and objective focused. Equipped with entry level programming skills and web development knowledge, I am fully committed to seeking further knowledge in technological fields. I am always willing to learn from past experiences and utilize them to enhance my performance with any project. I believe continuous learning drives and moves an organization forward." style={{ marginLeft: 5 }} />
                     <a href="https://www.linkedin.com/in/justintaylordickens/" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon className="about-icon-linked" size="2x" icon={faLinkedin} />
                     </a>
                     <a href="https://github.com/taylordickens17" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon className="about-icon-git" size="2x" icon={faGithubSquare} />
+                    </a>
+                    <a href="mailto:justindickens17@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon className="about-icon-git" size="2x" icon={faEnvelopeSquare} />
                     </a>
                 </Card>
             </Row>
