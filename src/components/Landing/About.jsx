@@ -24,7 +24,7 @@ export default function About() {
                         <Row justify="center" align="middle" gutter={[16, 16]}>
                             <Col span={14}>
                                 <h1 style={{ color: "white" }}>Our Mission</h1>
-                                <p style={{ color: "white" }}>Our mission is to teach people about the Solar System in an interactive way. We wanted to create a fun, educational environment giving facts about our solar system</p>
+                                <p style={{ color: "white" }}>Our mission is to teach people about the Solar System in an interactive way. We wanted to create a fun, educational environment giving facts about our solar system.</p>
                             </Col>
                         </Row>
                         <hr style={{ width: '57%' }} />
