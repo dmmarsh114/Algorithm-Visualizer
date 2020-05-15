@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+.title-page::-webkit-scrollbar {
+    display: none;
+}
+
 .title {
     color: white;
     font-style: normal;
