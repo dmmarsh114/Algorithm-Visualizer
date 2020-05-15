@@ -77,7 +77,22 @@
 
 @media (max-width: 500px) {
     .solar-system-card {
-        margin-top: 40rem !important;
+        margin-top: 50rem !important;
         margin-left: 1rem !important;
+        min-width: 350px;
+    }
+
+    .solar-system-img {
+        width: 350px;
+        height: 200px;
+        background-size: initial;
+        object-fit: cover;
+    }
+
+    .planet-img {
+        width: 150px;
+        height: 150px;
+        background-size: initial;
+        object-fit: cover;
     }
 }
