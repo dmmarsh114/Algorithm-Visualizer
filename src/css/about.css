@@ -6,6 +6,10 @@
     background-color: black;
 }
 
+.about-page::-webkit-scrollbar {
+    display: none;
+  }
+
 .about-bttn {
     margin-top: 3rem;
     background-color: black !important;
