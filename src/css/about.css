@@ -1,12 +1,16 @@
 .about-page {
     font-family: "Muli", sans-serif;
     overflow-x: hidden !important;
-    height: 100vh;
     width: 100%;
     background-color: black;
 }
 
+.about-page::-webkit-scrollbar {
+    display: none;
+  }
+
 .about-bttn {
+    margin-top: 3rem;
     background-color: black !important;
     color: white !important;
 }
@@ -26,8 +30,12 @@
     justify-content: center;
 }
 
+.about-icons {
+    display: flex;
+    justify-content: center;
+}
+
 .about-icon-linked {
-    margin-left: 5.75rem;
     margin-top: 10px;
     color: white;
     transition: color 0.5s ease;
@@ -45,4 +53,10 @@
 
 .about-icon-linked:hover {
     color: grey;
+}
+
+.about-back-bttn {
+    background-color: black !important;
+    color: white !important;
+    margin: 1em;
 }

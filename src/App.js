@@ -9,6 +9,7 @@ import SolarSystemPage from './components/SolarSystem/SolarSystemPage';
 import LandingPage from './components/Landing/LandingPage';
 import Footer from './components/NextPage/Footer';
 import About from './components/Landing/About';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 
@@ -33,32 +34,33 @@ function App() {
         setPlanetVolValue(planetData.vol.volValue);
         setPlanetVolExponent(planetData.vol.volExponent);
         setPlanetGravity(planetData.gravity)
-        planetData.moons === null ? setNumberOfMoons('0') : setNumberOfMoons(planetData.moons.length);  
+        planetData.moons === null ? setNumberOfMoons('0') : setNumberOfMoons(planetData.moons.length);
       })
   }
 
   return (
     <div>
       <Router>
+        <ScrollToTop />
         <Switch>
-                <Route exact path="/about">
-                    <About />
-                </Route>
-                <Route exact path="/home">
-                  <LandingPage />
-                  <SolarSystemPage
-                    fetchPlanetInfo={fetchPlanetInfo}
-                    planetName={planetName}
-                    numberOfMoons={numberOfMoons}
-                    sideralOrbit={sideralOrbit}
-                    sideralRotation={sideralRotation}
-                    planetVolValue={planetVolValue}
-                    planetVolExponent={planetVolExponent}
-                    planetGravity={planetGravity}
-                  />
-                </Route>
-            </Switch>
-            <Footer />
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/">
+            <LandingPage />
+            <SolarSystemPage
+              fetchPlanetInfo={fetchPlanetInfo}
+              planetName={planetName}
+              numberOfMoons={numberOfMoons}
+              sideralOrbit={sideralOrbit}
+              sideralRotation={sideralRotation}
+              planetVolValue={planetVolValue}
+              planetVolExponent={planetVolExponent}
+              planetGravity={planetGravity}
+            />
+          </Route>
+        </Switch>
+        <Footer />
       </Router>
     </div>
   );

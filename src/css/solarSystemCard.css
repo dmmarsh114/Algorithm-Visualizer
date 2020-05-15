@@ -61,3 +61,23 @@
 .solar-system-desc {
     margin-top: 20px;
 }
+
+@media (max-width: 1250px) {
+    .solar-system-card {
+      margin-top: 60rem !important;
+      margin-left: 24rem !important;
+    }
+}
+
+@media (max-width: 1250px) {
+    .solar-system-card {
+      margin-left: 19rem !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .solar-system-card {
+        margin-top: 40rem !important;
+        margin-left: 1rem !important;
+    }
+}

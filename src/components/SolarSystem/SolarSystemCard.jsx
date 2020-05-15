@@ -1,4 +1,6 @@
-import React, { useState }from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { Card } from 'antd';
 import planets from './Planets';
 
@@ -6,6 +8,12 @@ import planets from './Planets';
 const SolarSystemCard = (props) => {
 
     const [weight, setWeight] = useState(0);
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000
+        })
+    })
 
     const chooseImg = (name) => {
         return planets[name].image
@@ -42,7 +50,7 @@ const SolarSystemCard = (props) => {
                 <img className="solar-system-img" src={chooseImg('SolarSystem')} alt="picture of solar system" />
                 <p className="solar-system-desc">
                     {chooseDescription('SolarSystem')} <br />
-                </p>       
+                </p>
                 <a href={`https://en.wikipedia.org/wiki/Solar_System`} target="_blank">Read More</a>
             </div>
 
@@ -66,7 +74,16 @@ const SolarSystemCard = (props) => {
                     props.planetName !== 'Sun' ?
                         <div>
                             {/* number of moons */}
-                            <p>Moons: {props.numberOfMoons} <br /> {props.numberOfMoons > 1 ? <a href="">See Moons</a> : props.numberOfMoons === 1 ? <a href="">See Moon</a> : ''}</p>
+                            <p>Moons: {props.numberOfMoons}
+                                <br />
+                                {
+                                    props.numberOfMoons >= 1 ?
+                                        <a href={`https://en.wikipedia.org/wiki/Moons_of_${props.planetName}`} target='blank'>
+                                            {props.numberOfMoons === 1 ? 'See Moon' : 'See Moons'}
+                                        </a>
+                                        : ''
+                                }
+                            </p>
                             {/* sideral orbit and rotation */}
                             <p>Year length: {Math.round(props.sideralOrbit)} days</p>
                             <p>Day length: {Math.round(Math.abs(props.sideralRotation))} hours</p>
@@ -84,16 +101,16 @@ const SolarSystemCard = (props) => {
                             <br />
                             <input className="weight-input" onChange={e => setWeight(e.target.value)} placeholder="Enter weight in lbs"></input>
                             {
-                                weight !== 0 ? 
-                                <p>You weigh {weightConverter(props.planetGravity)}lbs on {props.planetName}!</p>
-                                : ''
-                            }   
+                                weight !== 0 ?
+                                    <p>You weigh {weightConverter(props.planetGravity)}lbs on {props.planetName}!</p>
+                                    : ''
+                            }
                         </div>
-                    : ''
+                        : ''
                 }
-                
-                <a href="">Click here to learn more about {props.planetName}!</a>
-            </div>
+
+                {/* <a href="">Click here to learn more about {props.planetName}!</a> */}
+            </div >
         )
     }
 
@@ -103,13 +120,14 @@ const SolarSystemCard = (props) => {
             className="solar-system-card"
             title={props.planetName === '' ? 'Click on a planet to start your journey!' : props.planetName.toUpperCase()}
             style={{ width: 300 }}
+            data-aos="fade-right"
         >
-            {props.planetName !== '' ? cardContent(): defaultCardContent()}
-            
+            {props.planetName !== '' ? cardContent() : defaultCardContent()}
+
         </Card>
     )
-        
-    
+
+
 }
 
 export default SolarSystemCard;
