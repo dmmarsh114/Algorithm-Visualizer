@@ -8,6 +8,10 @@
     text-align: center;
 }
 
+.footer::-webkit-scrollbar {
+    display: none;
+  }
+
 .footer-col-about {
     display: flex !important;
     justify-content: center;
