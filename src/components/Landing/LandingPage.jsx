@@ -16,7 +16,8 @@ export default function LandingPage() {
                     <div style={props}>
                         <h1 className="title">Solar System</h1>
                         <h1 className="title-two">Visualizer</h1>
-
+                        <br />
+                        <p className="experience-tag">For the best experience, please use desktop.</p>
                         <Row justify="center">
                             <a href="#solar-system"><Button className="landing-bttn" shape="round" size="large">Explore</Button></a>
                         </Row>
