@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+.title-page::-webkit-scrollbar {
+    display: none;
+}
+
 .title {
     color: white;
     font-style: normal;
@@ -42,6 +46,10 @@
     color: white !important;
 }
 
+.experience-tag {
+    visibility: hidden;
+}
+
 @media (max-width: 1315px) {
     .title {
         font-size: 100px;
@@ -60,6 +68,12 @@
     .title-two {
         font-size: 80px;
     }
+
+    .experience-tag {
+        visibility: visible;
+        text-align: center;
+        color: lightgray;
+    }
 }
 
 @media (max-width: 785px) {
@@ -70,6 +84,8 @@
     .title-two {
         font-size: 60px;
     }
+
+    
 }
 
 @media (max-width: 640px) {

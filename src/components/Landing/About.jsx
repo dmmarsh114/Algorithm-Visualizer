@@ -32,7 +32,7 @@ export default function About() {
                         <Row justify="center" align="top" className="">
                             <Card
                                 style={{ width: 250, margin: '10px', backgroundColor: 'black' }}
-                                cover={<img alt="Daniel" src={require('../../assets/DanielMarsh3.jpg')} />}
+                                cover={<img alt="Daniel" src={require('../../assets/DanielMarsh1.jpg')} />}
                                 bordered={false}
                             >
                                 <Meta title="Daniel Marsh" description="I am a full-stack web developer who spends my free time making useless things with code. Feel free to connect with me on LinkedIn!" style={{ marginLeft: 5 }} />
