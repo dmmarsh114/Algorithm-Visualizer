@@ -21,6 +21,6 @@
   },
   "include": [
     "src",
-    "public/p5.js"
+    "public/p5.js", "src/index.js"
   ]
 }
