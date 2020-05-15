@@ -9,6 +9,7 @@ import SolarSystemPage from './components/SolarSystem/SolarSystemPage';
 import LandingPage from './components/Landing/LandingPage';
 import Footer from './components/NextPage/Footer';
 import About from './components/Landing/About';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
   return (
     <div>
       <Router>
+        <ScrollToTop />
         <Switch>
           <Route exact path="/about">
             <About />
