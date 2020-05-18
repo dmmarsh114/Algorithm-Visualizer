@@ -50,6 +50,10 @@
     visibility: hidden;
 }
 
+.scroll-down-btn {
+    visibility: hidden;
+}
+
 @media (max-width: 1315px) {
     .title {
         font-size: 100px;
@@ -106,5 +110,15 @@
 
     .title-two {
         font-size: 35px;
+    }
+
+    .landing-bttn {
+        visibility: hidden;
+    }
+    
+    .scroll-down-btn {
+        visibility: visible;
+        margin-right: 7rem;
+        margin-top: 4rem;
     }
 }

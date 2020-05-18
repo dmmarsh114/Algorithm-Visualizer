@@ -20,6 +20,7 @@ export default function LandingPage() {
                         <p className="experience-tag">For the best experience, please use desktop.</p>
                         <Row justify="center">
                             <a href="#solar-system"><Button className="landing-bttn" shape="round" size="large">Explore</Button></a>
+                            <p className="experience-tag scroll-down-btn">Scroll Down</p>
                         </Row>
                     </div>
                 )}
